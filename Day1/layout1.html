@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 800px;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .Box{
+            border: 2px solid rgba(186, 186, 208, 0.127);  
+            height: 600px;
+            width: 450px;
+            background-color: rgba(218, 222, 224, 0.174);
+        }
+        .p1{
+            font-size: 40px;
+            text-align: center;
+        }
+        .p2{
+            font-size: 20px;
+            text-align: center;
+        }
+        .button{
+            background-color: rgb(91, 222, 91);
+            border: 2px solid rgb(77, 211, 77);
+            padding: 20px 30px;
+            margin-left: 170px;
+            color: white;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="Box" id="Box-1">
+            <p class="p1">Basic</p>
+            <p class="p2">$10 / month<br><br><br>
+            Feature 1<br><br><br>
+            Feature 2</p><br><br><br>
+            <button class="button">Sign Up</button>
+        </div>
+        <div class="Box" id="Box-2">
+            <p class="p1">Premium</p>
+            <p class="p2">$30 / month<br><br><br>
+            Feature 1<br><br><br>
+            Feature 2<br><br><br>
+            Feature 3<br><br><br></p>
+            <button class="button">Sign Up</button>
+        </div>
+        <div class="Box" id="Box-3">
+            <p class="p1">Pro</p>
+            <p class="p2">$50 / month<br><br><br>
+            Feature 1<br><br><br>
+            Feature 2<br><br><br>
+            Feature 3<br><br><br>
+            Feature 4<br><br><br></p>
+           <button  class="button">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>
