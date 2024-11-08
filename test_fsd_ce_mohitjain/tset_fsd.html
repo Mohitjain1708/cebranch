@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 300px;
+}
+    </style>
+</head>
+<body>
+    <form class="form" action="currency.html" onsubmit="return validate()">
+    Label : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="login"><br><br>
+    Password: <input type="password" id="password"><br><br>
+    <input type="submit">
+    <input type="reset">
+    </form>
+</body>
+<script>
+   function validate(){
+    login1=document.getElementById("login");
+    password1=document.getElementById("password");
+    if(login1.value=='Abes' || password1.value=='Abes123'){
+        alert("valid");
+        return true;
+    }
+    else{
+        alert("Invalid Entry");
+        return false;
+    }
+   }
+</script>
+
+</html>
