@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Student Record Management System</title>
+<style>
+/* Reset some basic styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* General styles */
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #f4f4f4;
+color: #333;
+}
+
+/* Header styles */
+header {
+background-color: #4CAF50;
+
+color: white;
+padding: 15px;
+}
+
+header .logo h1 {
+display: inline;
+font-size: 2em;
+}
+
+header nav ul {
+list-style: none;
+float: right;
+}
+
+header nav ul li {
+display: inline;
+margin-left: 20px;
+}
+
+header nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+
+text-decoration: underline;
+}
+
+/* Banner Section */
+#home .banner {
+background: #6dbf7c;
+color: white;
+text-align: center;
+padding: 50px 0;
+}
+
+#home .banner h2 {
+font-size: 2.5em;
+}
+
+#home .banner p {
+font-size: 1.2em;
+}
+
+/* Section Styles */
+.section {
+padding: 40px;
+margin: 20px 0;
+background-color: white;
+border-radius: 8px;
+}
+
+.section h2 {
+font-size: 2em;
+margin-bottom: 20px;
+}
+
+.section p, .section ul {
+font-size: 1.1em;
+}
+
+ul {
+list-style: none;
+}
+
+ul li {
+margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+position: fixed;
+width: 100%;
+
+bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+header .logo h1 {
+font-size: 1.5em;
+}
+
+header nav ul {
+float: none;
+text-align: center;
+}
+
+header nav ul li {
+display: block;
+margin-left: 0;
+margin-bottom: 10px;
+}
+
+.section {
+padding: 20px;
+}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="logo">
+<h1>SRMS</h1>
+</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#technology">Technology</a></li>
+<li><a href="#security">Data Security</a></li>
+<li><a href="#interface">Interface</a></li>
+<li><a href="#collaboration">Collaboration</a></li>
+<li><a href="#future">Future Trends</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="section">
+<div class="banner">
+<h2>Efficient, Secure, and Innovative Student Record Management</h2>
+<p>Streamlining Student Data for Success in Education</p>
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p>The Student Record Management System (SRMS) simplifies the management of
+student data, ensuring accessibility, security, and efficiency.</p>
+</section>
+
+<section id="challenges" class="section">
+<h2>Current Challenges</h2>
+<ul>
+<li>Data Fragmentation</li>
+<li>Manual Processes</li>
+<li>Data Entry Errors</li>
+<li>Compliance Issues</li>
+</ul>
+</section>
+
+<section id="technology" class="section">
+<h2>Technology Integration</h2>
+<p>We incorporate cutting-edge technologies such as cloud computing, AI,
+blockchain, and mobile integration to streamline record management.</p>
+</section>
+
+<section id="security" class="section">
+<h2>Data Accuracy and Security</h2>
+<ul>
+<li>Automated Data Validation</li>
+
+<li>Encryption for Privacy</li>
+<li>Role-Based Access Control</li>
+<li>Backup and Recovery</li>
+</ul>
+</section>
+
+<section id="interface" class="section">
+<h2>User-Friendly Interface</h2>
+<p>The platform ensures a simple, intuitive interface for all users—administrators,
+educators, and students.</p>
+</section>
+
+<section id="collaboration" class="section">
+<h2>Collaboration and Communication</h2>
+<p>Our system promotes real-time collaboration among faculty, students, and
+parents, ensuring seamless communication.</p>
+</section>
+
+<section id="future" class="section">
+<h2>Future Trends</h2>
+<ul>
+<li>AI-Driven Insights</li>
+<li>Voice Interfaces</li>
+<li>Interoperability with Other Platforms</li>
+<li>Personalized Learning Experiences</li>
+</ul>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<p>For inquiries, email us at <a
+href="mailto:support@srms.com">support@srms.com</a> or call us at +1 (800) 123-
+4567.</p>
+</section>
+
+<footer>
+<p>&copy; 2024 SRMS | All Rights Reserved</p>
+</footer>
+
+<script>
+// Simple script to enhance user experience (if needed)
+
+// For example: adding a scroll effect or interactive feature
+document.addEventListener("DOMContentLoaded", function () {
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('header nav ul li a');
+
+// Highlight the current section in navigation
+window.addEventListener('scroll', function () {
+let currentSection = "";
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+if (window.scrollY >= sectionTop - 50) {
+currentSection = section.getAttribute('id');
+
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href').includes(currentSection)) {
+link.classList.add('active');
+}
+});
+});
+});
+</script>
+</body>
+</html>

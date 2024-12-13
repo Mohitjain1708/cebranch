@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events in JavaScript</h1>
+    Name: <input type="text" placeholder="Enter your name" id="2">
+    <p id="focusmessage"></p>
+    Select colour:
+    <select id="colorselect">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <p id="1"></p>
+    Type something: <input type="text" placeholder="Start typing" id="text">
+    <p id="hi"></p>
+</body>
+<script>
+    let div1=document.createElement("div");
+    div1.id="div";
+
+    let button=document.createElement("button");
+    button.textContent="Click me";
+    button.id="btn";
+    div1.appendChild(button);
+
+    let para=document.createElement("p");
+    para.id="clickmessage";
+    div1.appendChild(para);
+    document.body.appendChild(div1);
+
+
+    document.getElementById("btn").onclick=function(){
+        document.getElementById("clickmessage").innerHTML="<b>Button clicked</b>"
+    };
+    document.getElementById("2").onfocus=function(){
+        document.getElementById("focusmessage").innerHTML="Focused"
+    };
+    document.getElementById("2").onblur=function(){
+        document.getElementById("focusmessage").innerHTML="Unfocus"
+    };
+    document.getElementById("colorselect").onchange=function(){
+        document.getElementById("1").innerHTML="Selected"
+    };
+    document.getElementById("text").oninput=function(){
+        document.getElementById("hi").innerHTML="Selected"
+    };
+</script>
+</html>
